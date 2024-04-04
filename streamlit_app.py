@@ -1,18 +1,11 @@
 import streamlit as st
 import pickle
 import pandas as pd
-from scipy.stats import zscore
-import matplotlib.pyplot as plt
+import sklearn
+import matplotlib as plt
+import scipy
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
-from sklearn.linear_model import Ridge
-from sklearn.model_selection import cross_val_score
 
 def load_model():
     with open('linear_regression_model.pkl', 'rb') as f:
