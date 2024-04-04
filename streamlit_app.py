@@ -8,7 +8,7 @@ def load_model():
 
 model = load_model()
 def main():
-    st.title("Model Demo")
+    st.title("CS Salary Calculator")
 
     # User inputs
     a = st.text_input("Age:", "")
@@ -20,8 +20,9 @@ def main():
         # Make prediction using the model
         data = {"Age":a,"Gender":g,"Education Level":ed, "Job Title":jt, "Years of Experience":yoe}
         df = pd.DataFrame(data,index = [0])
-        prediction = model.predict(df)
-        st.write(f"Salary Prediction (Monthly in Rupees): {prediction}")
+        prediction = model.predict(df)[0]
+        st.write(f"Salary Prediction: ₹{prediction}/Month")
+        st.write(f"This is equal to: ${float(prediction)*0.012}/Month")
 
 if __name__ == "__main__":
     main()
