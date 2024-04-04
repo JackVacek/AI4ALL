@@ -19,7 +19,7 @@ def main():
     if st.button("Predict"):
         # Make prediction using the model
         data = {"Age":a,"Gender":g,"Education Level":ed, "Job Title":jt, "Years of Experience":yoe}
-        df = pd.DataFrame(data)
+        df = pd.DataFrame(data,index = [0])
         prediction = model.predict(df)
         st.write(f"Salary Prediction (Monthly in Rupees): {prediction}")
 
