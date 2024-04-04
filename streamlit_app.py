@@ -1,11 +1,5 @@
 import streamlit as st
 import pickle
-import pandas as pd
-import sklearn
-import matplotlib as plt
-import scipy
-import seaborn as sns
-import numpy as np
 
 def load_model():
     with open('linear_regression_model.pkl', 'rb') as f:
