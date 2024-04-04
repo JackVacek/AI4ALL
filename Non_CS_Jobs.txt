@@ -1,25 +1,25 @@
 
-‘Sales Associate’
-‘Director’
-‘Marketing Analyst’
-‘Product Manager’
-‘Sales Manager’
-‘Marketing Coordinator’
-‘Senior Scientist’
-‘HR Manager’
-‘Financial Analyst'
+'Sales Associate'
+'Director'
+'Marketing Analyst'
+'Product Manager'
+'Sales Manager'
+'Marketing Coordinator'
+'Senior Scientist'
+'HR Manager'
+'Financial Analyst'
 'Project Manager'
 'Customer Service Rep'
 'Operations Manager'
 'Marketing Manager'
-‘Senior Engineer’
+'Senior Engineer'
 'Sales Director'
 'Business Analyst'
 'VP of Operations
 'Recruiter'
 'Financial Manager'
 'Social Media Specialist'
-‘Senior Consultant’
+'Senior Consultant'
 'Product Designer'
 'CEO'
 'Accountant'
@@ -72,6 +72,8 @@ Junior Designer'
 'Customer Success Manager'
 'Senior Graphic Designer'
 'Supply Chain Analyst'
+'VP of Operations'
+'Senior Manager'
 'Senior Business Analyst'
 'Junior Marketing Analyst'
 'Office Manager'
