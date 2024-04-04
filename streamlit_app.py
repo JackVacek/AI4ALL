@@ -6,8 +6,8 @@ def load_model():
         model = pickle.load(f)
     return model
 
+model = load_model()
 def main():
-    model = load_model()
     st.title("Model Demo")
 
     # User inputs
