@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-
+import pandas as pd
 def load_model():
     with open('linear_regression_model.pkl', 'rb') as f:
         model = pickle.load(f)
@@ -18,7 +18,9 @@ def main():
     yoe = st.text_input("Years of Experience:","")
     if st.button("Predict"):
         # Make prediction using the model
-        prediction = model.predict([[int(a), g, ed, jt, int(yoe)]])[0]
+        data = {"Age":a,"Gender":g,"Education Level":ed, "Job Title":jt, "Years of Experience":yoe}
+        df = pd.DataFrame(data)
+        prediction = model.predict(df)
         st.write(f"Salary Prediction (Monthly in Rupees): {prediction}")
 
 if __name__ == "__main__":
