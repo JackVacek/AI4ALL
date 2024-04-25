@@ -23,7 +23,7 @@ def main():
         prediction = model.predict(df)[0]
         st.write(f"Salary Prediction: ₹{prediction:.2f}/Month")
         st.write(f"This is equal to: ${float(prediction)*0.012:.2f}/Month")
-        if data[1] != "Male":
+        if data["Gender"] != "Male":
             data = {"Age":a,"Gender":"Male","Education Level":ed, "Job Title":jt, "Years of Experience":yoe}
             df = pd.DataFrame(data,index = [0])
             prediction = model.predict(df)[0]
