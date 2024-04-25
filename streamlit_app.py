@@ -21,8 +21,13 @@ def main():
         data = {"Age":a,"Gender":g,"Education Level":ed, "Job Title":jt, "Years of Experience":yoe}
         df = pd.DataFrame(data,index = [0])
         prediction = model.predict(df)[0]
-        st.write(f"Salary Prediction: ₹{prediction}/Month")
-        st.write(f"This is equal to: ${float(prediction)*0.012}/Month")
-
+        st.write(f"Salary Prediction: ₹{prediction:.2f}/Month")
+        st.write(f"This is equal to: ${float(prediction)*0.012:.2f}/Month")
+        if data[1] != "Male:
+            data = {"Age":a,"Gender":"Male","Education Level":ed, "Job Title":jt, "Years of Experience":yoe}
+            df = pd.DataFrame(data,index = [0])
+            prediction = model.predict(df)[0]
+            st.write(f"If you were a male you would make: ₹{prediction:.2f}/Month")
+        st.write(f"This is equal to: ${float(prediction)*0.012:.2f}/Month")
 if __name__ == "__main__":
     main()
