@@ -28,6 +28,6 @@ def main():
             df = pd.DataFrame(data,index = [0])
             prediction = model.predict(df)[0]
             st.write(f"If you were a male you would make: ₹{prediction:.2f}/Month")
-        st.write(f"This is equal to: ${float(prediction)*0.012:.2f}/Month")
+            st.write(f"This is equal to: ${float(prediction)*0.012:.2f}/Month")
 if __name__ == "__main__":
     main()
